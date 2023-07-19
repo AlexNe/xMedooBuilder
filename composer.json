@@ -9,7 +9,10 @@
             "role": "Developer"
         }
     ],
+    "license": "Apache-2.0",
+    "version": "1.0.1",
     "require": {
+        "php": ">=7.4",
         "catfan/medoo": "^2.1"
     },
     "autoload": {
