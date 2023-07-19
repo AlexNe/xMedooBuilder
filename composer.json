@@ -1,0 +1,20 @@
+{
+    "name": "xfile/x-medoo-builder",
+    "description": "Medoo DB builder",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Oleksandr Nizhynskyi",
+            "email": "xfilee@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "catfan/medoo": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "XModule\\XMedooBuilder\\": "src/"
+        }
+    }
+}
