@@ -43,6 +43,7 @@ class TableQueryController extends QueryController {
 				foreach ($row as $key => $value) { if(in_array($key, $this->owner->__get_table_columns())) $data[$key] = $value; }
 				$result = $this->insert($data)->last_id();
 				if(is_numeric($result) && $result > 0) {
+					$this->owner->__row_id($result);
 					$this->owner[$this->table_index_name] = $result;
 					$this->have_in_db = true;
 				}
