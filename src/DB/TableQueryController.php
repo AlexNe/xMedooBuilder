@@ -34,6 +34,23 @@ class TableQueryController extends QueryController {
 		return $this;
 	}
 
+	/**
+	 * Load data to owner ModelData class
+	 * @return $this
+	 */
+	public function load(): QueryController {
+		if(!is_null($this->owner)){
+			$data = $this->row();
+			if(count($data)>0){
+				foreach ($data as $col => $val ) {
+					$this->owner->set($col, $val);
+				}
+				$this->have_in_db = true;
+			}
+		}
+		return $this;
+	}
+
 	public function save(): TableQueryController {
 		$row = $this->owner->to_array();
 		if(count($row) > 0) {
