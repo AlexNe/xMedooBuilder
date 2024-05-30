@@ -41,7 +41,7 @@ class TableQueryController extends QueryController {
 	public function load(): QueryController {
 		if(!is_null($this->owner)){
 			$data = $this->row();
-			if(count($data)>0){
+			if($data && count($data) > 0) {
 				foreach ($data as $col => $val ) {
 					$this->owner->set($col, $val);
 				}
