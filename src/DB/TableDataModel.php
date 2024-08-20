@@ -76,14 +76,17 @@ class TableDataModel implements ArrayAccess, Countable, JsonSerializable {
 		return isset($this->row[$offset]);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetGet($offset) {
 		return $this->row[$offset] ?? null;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value) {
 		if (!is_null($offset)) $this->set($offset, $value);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($offset) {
 		unset($this->row[$offset]);
 	}
@@ -92,6 +95,7 @@ class TableDataModel implements ArrayAccess, Countable, JsonSerializable {
 		return count($this->row);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize() {
 		return $this->row;
 	}
