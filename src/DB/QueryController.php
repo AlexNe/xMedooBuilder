@@ -38,12 +38,12 @@ class QueryController {
 	}
 
 	public function desc($column): QueryController {
-		$this->where_array["ORDER"] = [$column, "DESC"];
+		$this->where_array["ORDER"] = [$column => "DESC"];
 		return $this;
 	}
 
 	public function asc($column): QueryController {
-		$this->where_array["ORDER"] = [$column, "ASC"];
+		$this->where_array["ORDER"] = [$column => "ASC"];
 		return $this;
 	}
 

@@ -10,7 +10,7 @@
         }
     ],
     "license": "Apache-2.0",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "require": {
         "php": ">=7.4",
         "catfan/medoo": "^2.1"
